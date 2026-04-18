@@ -354,8 +354,9 @@
 
       // Placeholder — backend will handle real auth later
       error.classList.remove("active");
-      showSuccess("Welcome back! 👋", "You're logged in. Let's find something great.");
-    }
+localStorage.setItem("finders_user", "true");
+showSuccess("Welcome back! 👋", "You're logged in. Let's find something great.");
+
 
     // ── SIGNUP ──
     function handleSignup() {
@@ -391,8 +392,9 @@
       }
 
       error.classList.remove("active");
-      showSuccess("OTP Sent! 📱", `We sent a verification code to +234${phone}. Enter it to activate your account.`);
-    }
+localStorage.setItem("finders_user", "true");
+showSuccess("OTP Sent! 📱", `We sent a verification code to +234${phone}. Enter it to activate your account.`);
+
 
     // ── SUCCESS ──
     function showSuccess(title, msg) {
